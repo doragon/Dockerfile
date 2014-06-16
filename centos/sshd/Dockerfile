@@ -13,12 +13,12 @@ RUN sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config
 RUN sed -ri 's/#UsePAM no/UsePAM no/g' /etc/ssh/sshd_config
  
 RUN yum -y install passwd sudo
-RUN adduser USER
-RUN echo PASSWORD | passwd USER --stdin
-RUN mkdir /home/USER/.ssh/
+RUN adduser doragon
+RUN echo pass | passwd doragon --stdin
+RUN mkdir /home/doragon/.ssh/
  
 RUN echo >> /etc/sudoers
-RUN echo "USER    ALL=(ALL)       ALL" >> /etc/sudoers
+RUN echo "doragon    ALL=(ALL)       ALL" >> /etc/sudoers
  
 RUN touch /etc/sysconfig/network
  
