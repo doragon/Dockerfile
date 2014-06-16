@@ -1,0 +1,14 @@
+if [ ! -L $WORKSPACE/api ]; then
+ln -s /data/api $WORKSPACE
+fi
+ 
+py.test --pep8 --junitxml=pytest.xml --cov-report xml --cov api
+ 
+rm -f pylint.log
+for f in `find ./api/* -name *.py`; do
+pylint --output-format=parseable --reports=y $f >> pylint.log
+done || :
+ 
+sloccount --duplicates --wide --details ./api/* > sloccount.sc
+ 
+clonedigger api/*
