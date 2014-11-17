@@ -7,4 +7,8 @@
  * sshd
  
 * centos
+ * efk
+  * elasticsearch
+  * td-agent(fluentd)
+  * Kibana3
  * sshd
