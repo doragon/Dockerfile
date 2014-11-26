@@ -1,6 +1,6 @@
 FROM ubuntu:13.10
  
-MAINTAINER doragon
+MAINTAINER koide
  
 # vim, ifconfig, curl
 RUN apt-get -y update

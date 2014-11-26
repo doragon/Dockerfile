@@ -1,6 +1,6 @@
 FROM ubuntu:13.10
 
-MAINTAINER doragon
+MAINTAINER koide
 
 RUN apt-get update && apt-get clean
 RUN apt-get install -y git-core curl gcc build-essential libssl-dev

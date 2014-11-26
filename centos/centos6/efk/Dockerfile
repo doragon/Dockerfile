@@ -1,6 +1,6 @@
 FROM centos:centos6
 
-MAINTAINER doragon
+MAINTAINER koide
 
 ### common ###
 RUN yum -y update && \

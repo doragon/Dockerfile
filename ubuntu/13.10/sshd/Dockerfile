@@ -1,6 +1,6 @@
 FROM ubuntu:13.10
  
-MAINTAINER doragon
+MAINTAINER koide
  
 # ssh:root
 RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list

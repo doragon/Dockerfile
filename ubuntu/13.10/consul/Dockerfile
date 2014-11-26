@@ -1,6 +1,6 @@
 FROM ubuntu:13.10
  
-MAINTAINER doragon
+MAINTAINER koide
  
 RUN apt-get -y update
 RUN apt-get -y install curl net-tools unzip wget

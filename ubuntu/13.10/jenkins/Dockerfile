@@ -1,6 +1,6 @@
 FROM ubuntu:13.10
 
-MAINTAINER doragon
+MAINTAINER koide
 
 # timezone
 RUN echo "Asia/Tokyo" > /etc/timezone

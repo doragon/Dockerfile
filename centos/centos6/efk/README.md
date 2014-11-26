@@ -31,12 +31,12 @@
 
 # How to use
 ```shell
-sudo docker build -t doragon/efk:centos6 .
+sudo docker build -t koide/efk:centos6 .
 ```
 
 ```shell
 sudo docker run -d \
  -p 9200:9200 -p 9300:9300 -p 24220:24220 -p 24224:24224 -p 8080:80 \
  -e "ES_HEAP_SIZE=200m" -e "NODE_NAME=es1" \
- doragon/efk:centos6
+ koide/efk:centos6
 ```

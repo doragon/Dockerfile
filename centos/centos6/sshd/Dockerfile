@@ -1,6 +1,6 @@
 FROM centos:6.4
  
-MAINTAINER doragon
+MAINTAINER koide
  
 # Install sshd
 RUN yum -y install openssh-server openssh-clients
