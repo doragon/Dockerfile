@@ -6,12 +6,12 @@
 
 # How to use
 ```shell
-sudo docker build -t koide/base_ubuntu1404 .
+sudo docker build -t koide/base:ubuntu1404 .
 ```
 
 ```shell
 sudo docker run -d \
- -p 22 koide/base_ubuntu1404 /sbin/my_init
+ -p 22 koide/base:ubuntu1404 /sbin/my_init
 ```
 
 ```shell

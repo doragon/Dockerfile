@@ -1,4 +1,4 @@
-FROM koide/base_ubuntu1404
+FROM koide/base:ubuntu1404
 
 MAINTAINER koide
 
