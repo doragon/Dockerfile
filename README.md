@@ -3,6 +3,7 @@
  * apache_wsgi
  * consul
  * go
+ * ipython-notebook
  * jenkins
  * sshd
  
