@@ -1,8 +1,6 @@
-# environment
-* ubuntu13.10
-* docker0.10
+# OS
+ * Ubuntu13.10
 
-# memo
-* ubuntu13.10
+# Memo
 * apache2
 * The default.conf is configuration file of apache2 for wsgi.

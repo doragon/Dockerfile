@@ -12,3 +12,6 @@
   * td-agent(fluentd)
   * Kibana3
  * sshd
+
+## debian
+ * jenkins(private docker hub tool)

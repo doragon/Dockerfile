@@ -1,11 +1,11 @@
-# environment
-* ubuntu14.04
-* docker0.11
+# OS
+ * Ubuntu13.10
 
-# memo
-* ubuntu13.10
+# Memo
 * consul
 
-# command
-docker build -t consul .
-docker run --net=host -it consul
+# How to use
+```shell
+sudo docker build -t consul .
+sudo docker run --net=host -it consul
+```

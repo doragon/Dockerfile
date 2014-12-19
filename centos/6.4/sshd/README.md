@@ -1,5 +1,5 @@
 # OS
- * Ubuntu13.10
+ * Centos6.4
 
 # How to use
 ```shell
