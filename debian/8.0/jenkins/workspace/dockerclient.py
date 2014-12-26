@@ -5,15 +5,18 @@ import sys
 from string import Template
 
 
-class DockerClient:
+class Logger:
 
     def __init__(self):
         logconfigpath = '/var/workspace/logger_config.ini'
-        base_url = 'tcp://xxx.xxx.xxx.xxx:4243'
-        version = '1.12'
-
         logging.config.fileConfig(logconfigpath)
         self.logger = logging.getLogger(__name__)
+
+
+class DockerClient:
+
+    def __init__(self, logger, base_url, version):
+        self.logger = logger
         self.logger.info('[DockerClient.__init__]')
         try:
             self.dockerc = docker.Client(
@@ -63,15 +66,18 @@ class DockerClient:
 
 
 if __name__ == '__main__':
-    dockerc = DockerClient()
+    log = Logger()
     argvs = sys.argv
-    if len(argvs) != 4:
-        dockerc.logger.error('Usage: # python %s filename' % argvs[0])
+    if len(argvs) != 6:
+        log.logger.error('Usage: # python %s filename' % argvs[0])
         exit()
 
-    dockerc.logger.info('workpath = ' + argvs[1])
-    dockerc.logger.info('tag = '      + argvs[2])
-    dockerc.logger.info('registry = ' + argvs[3])
+    log.logger.info('workpath = ' + argvs[1])
+    log.logger.info('tag = '      + argvs[2])
+    log.logger.info('registry = ' + argvs[3])
+    log.logger.info('base_url = ' + argvs[4])
+    log.logger.info('version = '  + argvs[5])
+    dockerc = DockerClient(log.logger, argvs[4], argvs[5])
 
     repository = argvs[3] + '/' + argvs[2]
     res = dockerc.build(workpath=argvs[1], tag=repository)
